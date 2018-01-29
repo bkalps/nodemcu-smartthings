@@ -77,8 +77,8 @@ The SmartApp receives data from your NodeMCU device, and updates the status of y
 	* (Now that I have the glass break sensor, I should look to add that also)
 3. Once the SmartApp is created, click the edit icon or go to App Settings -> OAuth and enable OAuth and save.
 4. Make note of the OAuth Client ID and Client Secret, you'll need these later.
-	* OAuth Client ID: 92a21ef0-76fb-4eda-b81d-ed44d69e690c
-	* OAuth Client Secret: 1b3913ea-2290-4260-88a4-e3e89590d981
+	* OAuth Client ID: 00a00aa0-00aa-0aaa-a00a-aa00a00a000a
+	* OAuth Client Secret: 0a000aa-0000-0000-00a0-a0a00000a000
 5. Click Publish -> For Me
 
 ## Flash the NodeMCU Lua firmware
@@ -117,8 +117,8 @@ sudo python esptool-master/esptool.py --port=/dev/cu.wchusbserial1420 write_flas
 	(Image)
 5. After all the code is uploaded, toggle the RTS button on then off to restart the device. It should boot up, connect to your WiFi and output a link to begin the OAuth flow.
 6. Copy and paste the OAuth link URL into your web browser and begin the OAuth flow. You'll need the OAuth Client ID and Secret from the SmartApp.
-	* OAuth Client ID: 92a21ef0-76fb-4eda-b81d-ed44d69e690c
-	* OAuth Client Secret: 1b3913ea-2290-4260-88a4-e3e89590d981
+	* OAuth Client ID: 00a00aa0-00aa-0aaa-a00a-aa00a00a000a
+	* OAuth Client Secret: 0a000aa-0000-0000-00a0-a0a00000a000
 7. After you enter the Client ID and Secret, you'll see a page like this allowing you to authorize the devices you set up earlier:
 	(Image)
 8. Authorize all the NodeMCU connected devices. When prompted, reboot the device by toggling the RTS button in ESPlorer on and off.
