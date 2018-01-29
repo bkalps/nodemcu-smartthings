@@ -2,11 +2,9 @@
 My personal notes and lessons from heythisisnate's repository
 
 # INTRODUCTION
-I came across this idea on the SmartThings message boards:
-https://community.smartthings.com/t/convert-your-wired-alarm-system-into-a-smartthings-smart-home-monitor-system-for-under-25-with-nodemcu-esp8266-2017/84285
+I came across this idea on the [SmartThings message boards](https://community.smartthings.com/t/convert-your-wired-alarm-system-into-a-smartthings-smart-home-monitor-system-for-under-25-with-nodemcu-esp8266-2017/84285)
 
-It led me to the user's (Nate Clark) link, who since then turned this into a company called Konnected.
-https://github.com/heythisisnate/nodemcu-smartthings
+It led me to the user, [Nate Clark's link](https://github.com/heythisisnate/nodemcu-smartthings), who since then turned this into a company called Konnected.
 
 ## SmartThings Connected Wired Security System using a NodeMCU ESP8266
 This project will help you connect wired contact sensors and motion sensors from an old wired home alarm system (such as Honeywell, ADT, Interlogix, etc) to Samsung SmartThings. Convert your old wired alarm system into an internet connected Smart Alarm!
@@ -26,10 +24,9 @@ The house I live in was built in the early 90s and came with a built-in home sec
 	4. A microUSB power supply or try one of these other ways to power the device
 	5. To connect your alarm siren or strobe light, you'll need a relay that the board can switch with a 3.3V signal. These work well and are only a few dollars each (ship from China).
 
-I bought #1-4 above as a package on Amazon for $19.95: https://www.amazon.com/gp/product/B075HLCGW8/ref=oh_aui_detailpage_o05_s00?ie=UTF8&psc=1
+I bought #1-4 above as a package on [Amazon for $19.95](https://www.amazon.com/gp/product/B075HLCGW8/ref=oh_aui_detailpage_o05_s00?ie=UTF8&psc=1)
 
-I bought #5 on Amazon for $5.48:
-https://www.amazon.com/gp/product/B01FK11HV4/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1
+I bought #5 on [Amazon for $5.48](https://www.amazon.com/gp/product/B01FK11HV4/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1)
 
 ## Nate's Annotated Photo
 
@@ -113,7 +110,7 @@ sudo python esptool-master/esptool.py --port=/dev/cu.wchusbserial1420 write_flas
 ```
 ## Load up the NodeMCU ESP8266
 	1. Download Esplorer. It's a cross-platform IDE for interacting with the NodeMCU. Very handy.
-	2. Use the instructors here (http://esp8266.ru/download/esp8266-doc/Getting%20Started%20with%20the%20ESPlorer%20IDE%20-%20Rui%20Santos.pdf) and simply use this command line in your terminal to run the ESPlorer: "sudo java –jar ESPlorer.jar"
+	2. Use the instructions [here](http://esp8266.ru/download/esp8266-doc/Getting%20Started%20with%20the%20ESPlorer%20IDE%20-%20Rui%20Santos.pdf) and simply use this command line in your terminal to run the ESPlorer: "sudo java –jar ESPlorer.jar"
 	3. Plug a microUSB cable into the NodeMCU and the other end into your computer, open up Esplorer, select the USBtoUART from the serial port chooser, set the baud rate to 115200, and click Open to connect. You may need to click the RTS button a couple times to connect and see something like this:
 (Image)
 	4. Once connected, it's time to upload the code. Click the Upload button in ESplorer and navigate to the lua directory. Highlight all the lua and html files and click Open to upload them to the device:
@@ -138,12 +135,10 @@ sudo python esptool-master/esptool.py --port=/dev/cu.wchusbserial1420 write_flas
 	2. Now go around your house testing it out!
 	3. Once everything is working properly, you can plug the NodeMCU into a standard USB power adapter and it will automatically boot up, connect to WiFi, and start listening for switches.
 		a. Or, like me, I powered it from my existing Alarm Panel since it looks cleaner:
-		Powering the Device from an Existing Alarm Panel
-		Most traditional alarm panels output 12V DC power from two screw terminals labeled AUX Output. This is used to power your home’s motion sensors, keypad, glass-break sensors, etc. You can tap into this power output to power your Konnected device. Use your alarm panel’s wiring diagram or user’s manual to identify the 12V DC AUX Output terminals.
-		 https://docs.konnected.io/security-alarm-system/wiring/power/
+			i. Most traditional alarm panels output 12V DC power from two screw terminals labeled AUX Output. This is used to power your home’s motion sensors, keypad, glass-break sensors, etc. You can tap into this power output to power your Konnected device. Use your alarm panel’s wiring diagram or user’s manual to identify the 12V DC AUX Output terminals.[link for more info](https://docs.konnected.io/security-alarm-system/wiring/power/)
 	4. Random message board details…
 		a. The "PIR" are going to be motion detectors; most of these will have 4 wires, 2 of these (in your case black & red) are going to an auxiliary power input that is powering the motion detector. The other 2 wires (green & yellow in your picture) are going to be the open/close loop.
 		b. Any hardwired door/window contacts will be wired similar to the green/yellow wire, they just open/close the circuit when the door is open/closed. Not sure if your contacts are normally open, or normally closed (they can be either). The resistors (hot dog shaped things with stripes) are in place to give you a normal voltage drop across the wires. From your picture, on the supervised pins, in a normal situation, should be 2.5 to 8.5 VDC.
 
 ## Siren stuff eventually
-https://docs.konnected.io/security-alarm-system/wiring/siren/
+[Link](https://docs.konnected.io/security-alarm-system/wiring/siren/) to Konnected siren wiring instructions.
