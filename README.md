@@ -29,6 +29,7 @@ I bought #1-4 above as a package on [Amazon for $19.95](https://www.amazon.com/g
 I bought #5 on [Amazon for $5.48](https://www.amazon.com/gp/product/B01FK11HV4/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1)
 
 ## Nate's Annotated Photo
+![alt text](screenshots/Nates_annotated_photo.png "Description goes here")
 
 # Step by Step Setup Guide
 
@@ -129,7 +130,7 @@ sudo python esptool-master/esptool.py --port=/dev/cu.wchusbserial1420 write_flas
 1. Open up your alarm panel and find the cluster of wires coming from the switches throughout your house. Hopefully they're labeled well, otherwise you'll have some testing to do. Using some jumper cables, connect each pair of wires from each switch to the corresponding pin and ground on the board.
 	* Nate recommends removing all the resistors. I kept one on for the Airbnb Window because it seemed to work better with it.
 	* If possible, use a breakout board or crimp connectors for stranded wires. I had the screw caps.
-	![alt tag](https://aax-us-east.amazon-adsystem.com/x/c/QicZtXZZAdSnzCXPbNF7S2AAAAFhOCuMgQEAAAFKAWeIKu0/https:/www.amazon.com/Electronics-Salon-Header-Breakout-Terminal-Connector/dp/B00SWN61I2/ref=as_at/?creativeASIN=B00SWN61I2&imprToken=0AN2C6vzueXvEWNDJsgeog&slotNum=2&s=industrial&ie=UTF8&qid=1504414814&sr=1-1&keywords=Male+Header+Breakout+Board,+Terminal+Block&linkCode=w61&tag=konnected-io-20&linkId=482555c202e6eb7ae9d40a295ed9965f "Description goes here")
+	(Image)
 		 A breakout board like this one gives you a clean and organized approach. The breakout board converts pins into screw terminals that work just fine with stranded wire. Here’s a larger breakout board for installs with more than 8 zones.
 2. Now go around your house testing it out!
 3. Once everything is working properly, you can plug the NodeMCU into a standard USB power adapter and it will automatically boot up, connect to WiFi, and start listening for switches.
