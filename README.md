@@ -99,15 +99,18 @@ Brian: For a while, I didn't think this worked, but in reality it worked fine, b
 	1. The firmware contained in this repo is a recent build from https://nodemcu-build.com/ with following packages: file, cjson, GPIO, HTTP, net, node, timer, UART, WiFi and TLS/SSL support. This firmware is on SDK version 1.5.4.1. Between the time that I did this project and wrote up this README, the NodeMCU firmware team has released a 2.0.0 firmware which has a bug with SSL/TLS and this program doesn't work. Until this is fixed, you must use the 1.5.4.1-final branch if you're building your own firmware at https://nodemcu-build.com/. More info in https://github.com/nodemcu/nodemcu-firmware/issues/1707.
 	2. I used esptool.py to flash the firmware (I'm using a Mac). There's pretty good documentation here including a couple other options for Windows users.
 	3. The exact command the author used to flash his firmware was:
-		a. esptool.py --port=/dev/cu.SLAB_USBtoUART write_flash --flash_mode dio 0x00000 firmware/nodemcu-1.5.4.1-final-10-modules-2017-03-23-20-42-52-integer.bin
+```
+esptool.py --port=/dev/cu.SLAB_USBtoUART write_flash --flash_mode dio 0x00000 firmware/nodemcu-1.5.4.1-final-10-modules-2017-03-23-20-42-52-integer.bin
+```
 		b. The port may vary depending on your platform, OS and UART driver.
 			i. My port: cu.wchusbserial1420
 			ii. Mode: dio for >=4 MByte modules (qio might work as well, YMMV).
 			iii. Firmware: firmware/nodemcu-1.5.4.1-final-10-modules-2017-03-23-20-42-52-integer.bin
 			iv. Start with sudo to have admin privileges, and use complete pathnames depending on where you are in the Terminal
 	4. The exact command I used to flash my firmware was:
-		a. sudo python esptool-master/esptool.py --port=/dev/cu.wchusbserial1420 write_flash --flash_mode dio 0x00000 nodemcu-smartthings-master/firmware/nodemcu-1.5.4.1-final-10-modules-2017-03-23-20-42-52-integer.bin
-
+```
+sudo python esptool-master/esptool.py --port=/dev/cu.wchusbserial1420 write_flash --flash_mode dio 0x00000 nodemcu-smartthings-master/firmware/nodemcu-1.5.4.1-final-10-modules-2017-03-23-20-42-52-integer.bin
+```
 ## Load up the NodeMCU ESP8266
 	1. Download Esplorer. It's a cross-platform IDE for interacting with the NodeMCU. Very handy.
 	2. Use the instructors here (http://esp8266.ru/download/esp8266-doc/Getting%20Started%20with%20the%20ESPlorer%20IDE%20-%20Rui%20Santos.pdf) and simply use this command line in your terminal to run the ESPlorer: "sudo java –jar ESPlorer.jar"
