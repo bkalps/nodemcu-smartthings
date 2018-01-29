@@ -29,7 +29,7 @@ I bought #1-4 above as a package on [Amazon for $19.95](https://www.amazon.com/g
 I bought #5 on [Amazon for $5.48](https://www.amazon.com/gp/product/B01FK11HV4/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1)
 
 ## Nate's Annotated Photo
-![alt text](https://github.com/bkalps/nodemcu-smartthings/screenshots/Nates_annotated_photo.png "Description goes here")
+![alt text](screenshots/Nates_annotated_photo.png "Description goes here")
 
 # Step by Step Setup Guide
 
